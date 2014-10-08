@@ -8,7 +8,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <DieDelegate>
+@property (readwrite) IBOutlet DieLabel *labelForDice1;
+@property (readwrite) IBOutlet DieLabel *labelForDice2;
+@property (readwrite) IBOutlet DieLabel *labelForDice3;
+@property (readwrite) IBOutlet DieLabel *labelForDice4;
+@property (readwrite) IBOutlet DieLabel *labelForDice5;
+@property (readwrite) IBOutlet DieLabel *labelForDice6;
+@property NSMutableArray *allLabels;
 
 @end
 
@@ -16,12 +23,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.allLabels = [NSMutableArray arrayWithObjects:self.labelForDice1,
+                                                            self.labelForDice2,
+                                                            self.labelForDice3,
+                                                            self.labelForDice4,
+                                                            self.labelForDice5,
+                                                            self.labelForDice6,
+                              nil];
+
+    for(DieLabel *eachLabel in self.allLabels)
+    {
+        eachLabel.delegate = self;
+    }
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onButtonPressed:(UIButton *)sender {
+
+    for(DieLabel *eachLabel in self.allLabels)
+    {
+        [eachLabel roll];
+    }
+}
+
+
+-(void) didRollDiceWithInt:(int)value{
+
+    NSLog(@"%d", value);
 }
 
 @end

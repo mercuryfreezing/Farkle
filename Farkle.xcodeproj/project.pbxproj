@@ -14,6 +14,7 @@
 		F4245F7919E5C28900C58A41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4245F7819E5C28900C58A41 /* Images.xcassets */; };
 		F4245F7C19E5C28900C58A41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4245F7A19E5C28900C58A41 /* LaunchScreen.xib */; };
 		F4245F8819E5C28900C58A41 /* FarkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4245F8719E5C28900C58A41 /* FarkleTests.m */; };
+		F4245F9619E5C2D800C58A41 /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4245F9519E5C2D800C58A41 /* DieLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F4245F8119E5C28900C58A41 /* FarkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4245F8619E5C28900C58A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4245F8719E5C28900C58A41 /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
+		F4245F9419E5C2D800C58A41 /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		F4245F9519E5C2D800C58A41 /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				F4245F7819E5C28900C58A41 /* Images.xcassets */,
 				F4245F7A19E5C28900C58A41 /* LaunchScreen.xib */,
 				F4245F6B19E5C28900C58A41 /* Supporting Files */,
+				F4245F9419E5C2D800C58A41 /* DieLabel.h */,
+				F4245F9519E5C2D800C58A41 /* DieLabel.m */,
 			);
 			path = Farkle;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				F4245F7419E5C28900C58A41 /* ViewController.m in Sources */,
 				F4245F7119E5C28900C58A41 /* AppDelegate.m in Sources */,
 				F4245F6E19E5C28900C58A41 /* main.m in Sources */,
+				F4245F9619E5C2D800C58A41 /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
