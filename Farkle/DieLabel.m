@@ -15,9 +15,10 @@
 
     if(self.isEnabled)
     {
-        
-        [self.delegate wasTapped:self];
+
         self.selected = YES;
+        [self.delegate wasTapped:self];
+
     }
 
 

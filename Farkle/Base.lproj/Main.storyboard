@@ -148,6 +148,15 @@
                                     <action selector="onButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="48F-AV-TVs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei3-7F-Umg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="62" width="78" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -178,6 +187,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="NXF-Ym-0ar"/>
+                                <exclude reference="ei3-7F-Umg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="GQh-yw-3vW"/>
@@ -208,6 +218,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="NXF-Ym-0ar"/>
+                                <include reference="ei3-7F-Umg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="GQh-yw-3vW"/>
@@ -243,6 +254,7 @@
                         <outlet property="labelForDice4" destination="rbZ-I7-8bZ" id="1xz-ih-W3u"/>
                         <outlet property="labelForDice5" destination="A5K-Wc-TSf" id="hLD-H3-1DY"/>
                         <outlet property="labelForDice6" destination="7bf-Tb-QTR" id="hgB-UV-14d"/>
+                        <outlet property="userScoreLabel" destination="ei3-7F-Umg" id="PtV-PI-t9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
