@@ -13,7 +13,16 @@
 
 -(IBAction)onTapped:(UITapGestureRecognizer *)sender{
 
+    if(self.isEnabled)
+    {
+        
+        [self.delegate wasTapped:self];
+    }
+
+
 }
+
+
 
 -(void) roll{
 
@@ -34,6 +43,8 @@
 
 
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <DieDelegate>
+@interface ViewController () <DieLabelDelegate>
 @property (readwrite) IBOutlet DieLabel *labelForDice1;
 @property (readwrite) IBOutlet DieLabel *labelForDice2;
 @property (readwrite) IBOutlet DieLabel *labelForDice3;
@@ -16,6 +16,7 @@
 @property (readwrite) IBOutlet DieLabel *labelForDice5;
 @property (readwrite) IBOutlet DieLabel *labelForDice6;
 @property NSMutableArray *allLabels;
+@property NSMutableArray *dice;
 
 @end
 
@@ -37,6 +38,8 @@
         eachLabel.delegate = self;
     }
 
+    self.dice = [NSMutableArray arrayWithObjects:@(0).description, nil];
+
 }
 
 - (IBAction)onButtonPressed:(UIButton *)sender {
@@ -51,6 +54,12 @@
 -(void) didRollDiceWithInt:(int)value{
 
     NSLog(@"%d", value);
+}
+
+-(void) wasTapped:(UILabel *)label{
+
+    
+    label.backgroundColor = [UIColor greenColor];
 }
 
 @end

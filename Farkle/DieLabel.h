@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol DieDelegate
+@protocol DieLabelDelegate
 
 //-(void) didRollDiceWithInt:(NSMutableArray *) values;
 -(void) didRollDiceWithInt:(int) value;
+-(void) wasTapped:(UILabel *) label;
 
 @end
 
 @interface DieLabel : UILabel
 
-@property id<DieDelegate> delegate;
+@property id<DieLabelDelegate> delegate;
 
 -(IBAction) onTapped:(UITapGestureRecognizer *) sender;
 -(void) roll;

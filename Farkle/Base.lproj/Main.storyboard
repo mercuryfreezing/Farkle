@@ -136,7 +136,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Za7-Oh-4GS" appends="YES" id="VLr-rM-zOR"/>
+                                    <outletCollection property="gestureRecognizers" destination="Za7-Oh-4GS" appends="YES" id="IuG-Yp-KOX"/>
                                 </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-Ym-0ar">
@@ -248,32 +248,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Fca-J1-ZvX" userLabel="Tap Gesture Recognizer 2">
                     <connections>
-                        <action selector="onTapped:" destination="GEz-qQ-QSV" id="2of-zs-C3Y"/>
+                        <action selector="onTapped:" destination="RZp-0w-dXV" id="b8I-Ir-dRs"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Za7-Oh-4GS" userLabel="Tap Gesture Recognizer 3">
                     <connections>
-                        <action selector="onTapped:" destination="RZp-0w-dXV" id="VJV-UC-hDX"/>
+                        <action selector="onTapped:" destination="HZP-na-jST" id="2cQ-Pz-qZD"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="HHv-5A-6V4" userLabel="Tap Gesture Recognizer 4">
                     <connections>
-                        <action selector="onTapped:" destination="HZP-na-jST" id="8e0-eQ-KvO"/>
+                        <action selector="onTapped:" destination="rbZ-I7-8bZ" id="Ofw-wD-QyJ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="0EV-xN-kZN" userLabel="Tap Gesture Recognizer 5">
                     <connections>
-                        <action selector="onTapped:" destination="rbZ-I7-8bZ" id="gBO-YU-66y"/>
+                        <action selector="onTapped:" destination="A5K-Wc-TSf" id="4qZ-3m-tlW"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="yX0-Ag-zEi" userLabel="Tap Gesture Recognizer 6">
                     <connections>
-                        <action selector="onTapped:" destination="A5K-Wc-TSf" id="ZZf-Cn-7L3"/>
+                        <action selector="onTapped:" destination="7bf-Tb-QTR" id="YSL-cA-5eS"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="E4q-d6-HrN" userLabel="Tap Gesture Recognizer 1">
                     <connections>
-                        <action selector="onTapped:" destination="7bf-Tb-QTR" id="pZJ-Hm-VMg"/>
+                        <action selector="onTapped:" destination="GEz-qQ-QSV" id="3k9-2L-mQI"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
