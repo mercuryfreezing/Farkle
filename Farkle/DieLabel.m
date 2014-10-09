@@ -17,6 +17,7 @@
     {
         
         [self.delegate wasTapped:self];
+        self.selected = YES;
     }
 
 
@@ -26,20 +27,23 @@
 
 -(void) roll{
 
-    int randomNumber;
-//    NSMutableArray *values = [[NSMutableArray alloc] init];
-//    for(int i=0; i<6; i++)
-//    {
-        randomNumber =arc4random_uniform(6)+1;
-//        [values insertObject:@(randomNumber).description atIndex:0];
+    if(!self.selected)
+    {
+        int randomNumber;
+    //    NSMutableArray *values = [[NSMutableArray alloc] init];
+    //    for(int i=0; i<6; i++)
+    //    {
+            randomNumber =arc4random_uniform(6)+1;
+    //        [values insertObject:@(randomNumber).description atIndex:0];
 
-//    }
+    //    }
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.delegate didRollDiceWithInt:randomNumber];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.delegate didRollDiceWithInt:randomNumber];
 
-        self.text = [NSString stringWithFormat:@"%d", randomNumber];
-    });
+            self.text = [NSString stringWithFormat:@"%d", randomNumber];
+        });
+    }
 
 
 }

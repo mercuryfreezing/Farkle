@@ -19,6 +19,7 @@
 @interface DieLabel : UILabel
 
 @property id<DieLabelDelegate> delegate;
+@property BOOL selected;
 
 -(IBAction) onTapped:(UITapGestureRecognizer *) sender;
 -(void) roll;

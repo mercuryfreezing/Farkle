@@ -38,7 +38,7 @@
         eachLabel.delegate = self;
     }
 
-    self.dice = [NSMutableArray arrayWithObjects:@(0).description, nil];
+    self.dice = [[NSMutableArray alloc] init];
 
 }
 
@@ -50,7 +50,6 @@
     }
 }
 
-
 -(void) didRollDiceWithInt:(int)value{
 
     NSLog(@"%d", value);
@@ -58,8 +57,16 @@
 
 -(void) wasTapped:(UILabel *)label{
 
-    
     label.backgroundColor = [UIColor greenColor];
+    //int selectedNumber = label.text.intValue;
+    //[self.dice insertObject:[NSNumber numberWithInt:selectedNumber] atIndex:0];
+    [self.dice insertObject:label atIndex:0];
+    
+
+    NSLog(@"%@", self.dice);
+
+    
+
 }
 
 @end
