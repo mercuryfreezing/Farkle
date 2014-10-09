@@ -19,6 +19,8 @@
 @property NSMutableArray *dice; //Keep track of dice selected
 @property (weak, nonatomic) IBOutlet UILabel *userScoreLabel;
 
+
+
 @end
 
 @implementation ViewController
@@ -47,6 +49,8 @@
 
 
     self.dice = [[NSMutableArray alloc] init];
+    self.userScoreLabel.text = @(0).description;
+
 
 }
 
@@ -59,9 +63,10 @@
         [eachLabel roll];
     }
 
-    int total = 0;
-    self.userScoreLabel.text = @(total).description;
-    [self calculateUserScore];
+
+    int userTotal = [self calculateUserScore];
+    NSLog(@"Total:%d", userTotal);
+    self.userScoreLabel.text = @(userTotal).description;
 
 }
 
@@ -79,16 +84,19 @@
 
 }
 
--(void) calculateUserScore{
+-(int) calculateUserScore{
 
-    int one_count;
-    int two_count;
-    int three_count;
-    int four_count;
-    int five_count;
-    int six_count;
 
-    int total =0;
+    int total = 0;
+
+    int one_count=0;
+    int two_count=0;
+    int three_count=0;
+    int four_count=0;
+    int five_count=0;
+    int six_count=0;
+
+
 
     for(DieLabel *eachLabel in self.dice)
     {
@@ -106,20 +114,49 @@
             six_count++;
     }
 
+//    if(one_count==1)
+//    {
+//        if(one_count==3)
+//        {
+//            total += 1000;
+//        }
+//        else
+//        {
+//            total += 100;
+//        }
+//    }
+
     if(one_count==3)
-        total = 1000;
+        total += 1000;
+//    if(one_count==1)
+//        total +=100;
     if(two_count==3)
         total += 200;
     if(three_count==3)
         total += 300;
     if(four_count==3)
         total += 400;
+//
+//    if(five_count==1)
+//    {
+//        if(five_count==3)
+//        {
+//            total += 500;
+//        }
+//        else
+//        {
+//            total += 50;
+//        }
+//    }
+
     if(five_count==3)
         total += 500;
+//    if(five_count==1)
+//        total +=50;
     if(six_count==3)
         total += 600;
 
-    self.userScoreLabel.text = @(total).description;
+    return total;
 
 }
 
